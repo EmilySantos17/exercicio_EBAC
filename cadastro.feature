@@ -15,20 +15,20 @@
 
             Esquema do Cenário: Email com formato inválido
             Quando eu preencher os demais campos obrigatórios marcados com asterisco
-            E inserir o email "<email_invalido>"
+            E inserir o email <email_invalido>
             E clicar no botão "Finalizar compra"
-            Então deve exibir uma "<mensagem>" de erro
+            Então deve exibir a mensagem de erro "Por favor insira um email com formato válido"
 
             Exemplos:
-            | email_invalido | mensagem                                     |
-            | @fulano        | Por favor insira um email com formato válido |
-            | fulano.com.br  | Por favor insira um email com formato válido |
-            | fulano@ebac    | Por favor insira um email com formato válido |
+            | email_invalido |
+            | @fulano        |
+            | fulano.com.br  |
+            | fulano@ebac    |
 
             Esquema do Cenário: Tentar cadastrar com campos obrigatórios vazios
-            Quando eu não preencher algum dos campos obrigatórios marcados com asterisco
+            Quando eu não preencher algum <campo> obrigatório marcado com asterisco
             E clicar no botão "Finalizar compra"
-            Então o sistema deve exibir uma "<mensagem>" de alerta
+            Então o sistema deve exibir uma <mensagem> de alerta
 
             Exemplos:
             | campo              | mensagem                                        |
